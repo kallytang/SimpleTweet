@@ -33,14 +33,19 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Login and showcasing infinite scrolling 
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/login.gif title='Login'/>
+          
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/infinite_scroll.gif' title='Infinite Scroll'  />
+
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/refresh_button.gif' title='Refresh Button'  />
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I made the twitter screen similar to the current twitter application. I had some trouble with vectors, realized i can't convert png files into files that could be used for xml vectors. There's some images/icons that were missing and i had to create the comment icon myself. 
 
 ## Open-source libraries used
 
@@ -49,7 +54,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2020] [name of copyright Kally Tang]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
