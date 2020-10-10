@@ -33,11 +33,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-
+Login:<br>
 <img src='https://github.com/kallytang/SimpleTweet/blob/master/login.gif' title='Login'/>
-      
+ Infinite Scroll(plus timestamp): <br>
 <img src='https://github.com/kallytang/SimpleTweet/blob/master/infinite_scroll.gif' title='Infinite Scroll'  />
-
+Pull down to refresh:<br>
 <img src='https://github.com/kallytang/SimpleTweet/blob/master/refresh_button.gif' title='Refresh Button'  />
 
 
