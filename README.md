@@ -47,6 +47,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 I made the twitter screen similar to the current twitter application. I had some trouble with vectors, realized i can't convert png files into files that could be used for xml vectors. There's some images/icons that were missing and i had to create the comment icon myself. 
 
+upload icon is from https://icons-for-free.com/box+document+outline+share+top+upload+icon-1320195323221671611/  
+
 ## Open-source libraries used
 
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
