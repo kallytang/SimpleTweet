@@ -34,7 +34,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 Login and showcasing infinite scrolling 
-<img src='https://github.com/kallytang/SimpleTweet/blob/master/login.gif title='Login'/>
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/login.gif' title='Login'/>
           
 <img src='https://github.com/kallytang/SimpleTweet/blob/master/infinite_scroll.gif' title='Infinite Scroll'  />
 
