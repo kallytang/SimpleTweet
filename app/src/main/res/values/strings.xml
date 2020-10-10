@@ -7,5 +7,9 @@
     <string name="intent_host">cprest</string>
     <string name="this_is_my_tweet">this is my tweet</string>
     <string name="avatar_of_user">avatar of user</string>
+    <string name="retweet_button">retweet button</string>
+    <string name="comment_icon">comment icon</string>
+    <string name="like_icon">like icon</string>
+    <string name="upload_icon">upload_icon</string>
 
 </resources>

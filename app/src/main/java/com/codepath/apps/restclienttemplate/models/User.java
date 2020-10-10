@@ -19,7 +19,7 @@ public class User {
         user.screenName = full_screen_name;
         user.profileImageUrl = jsonObject.getString("profile_image_url_https");
 
-        Log.i("user", jsonObject.toString());
+//        Log.i("user", jsonObject.toString());
         return user;
 
     }

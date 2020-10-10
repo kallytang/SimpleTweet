@@ -47,46 +47,61 @@
         android:layout_marginStart="5dp"
         android:layout_toEndOf="@+id/tvName"
         android:textSize="16sp"
-        tools:text="\@chicken_nugget123" />
+        tools:text="\@chicken_nugg123" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/comment_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_below="@+id/tvBody"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/ivProfileImage"
+        android:contentDescription="@string/comment_icon"
         app:srcCompat="@drawable/ic_vector_comment_stroke" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/retweet_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_below="@+id/tvBody"
         android:layout_marginStart="60dp"
         android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/imageView3"
+        android:layout_toEndOf="@+id/comment_icon"
+        android:contentDescription="@string/retweet_button"
         app:srcCompat="@drawable/ic_vector_retweet_stroke" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/like_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_below="@+id/tvBody"
         android:layout_marginStart="65dp"
         android:layout_marginTop="10dp"
-        android:layout_toEndOf="@+id/imageView5"
+        android:layout_toEndOf="@+id/retweet_icon"
+        android:contentDescription="@string/like_icon"
         app:srcCompat="@drawable/ic_vector_heart_stroke" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/upload_icon"
         android:layout_width="17dp"
         android:layout_height="17dp"
         android:layout_below="@+id/tvBody"
         android:layout_marginStart="60dp"
         android:layout_marginTop="12dp"
-        android:layout_toEndOf="@+id/imageView9"
+        android:layout_toEndOf="@+id/like_icon"
+        android:contentDescription="@string/upload_icon"
         app:srcCompat="@drawable/ic_upload_svgrepo_com" />
+
+    <TextView
+        android:id="@+id/tvTimeDifference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/tvScreenName"
+        android:textSize="16sp"
+        tools:text="32m" />
 
 </RelativeLayout>
