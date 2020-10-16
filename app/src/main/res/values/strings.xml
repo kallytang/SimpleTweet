@@ -11,5 +11,9 @@
     <string name="comment_icon">comment icon</string>
     <string name="like_icon">like icon</string>
     <string name="upload_icon">upload_icon</string>
+    <string name="create_tweet_button" />
+    <string name="what_s_happening">What\'s happening?</string>
+    <string name="tweet">Tweet</string>
+    <string name="number_of_retweets">number of retweets</string>
 
 </resources>

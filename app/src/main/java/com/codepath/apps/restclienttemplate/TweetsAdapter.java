@@ -1,6 +1,8 @@
 package com.codepath.apps.restclienttemplate;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +66,10 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         TextView tvScreenName;
         TextView tvName;
         TextView tvTimeDifference;
+        TextView tvRetweetCount;
+        TextView tvFavoriteCount;
+        ImageView retweetIcon;
+        ImageView favoritedIcon;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             ivProfileImage = itemView.findViewById(R.id.ivProfileImage);
@@ -71,6 +77,10 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             tvName = itemView.findViewById(R.id.tvName);
             tvTimeDifference = itemView.findViewById(R.id.tvTimeDifference);
+            tvRetweetCount = itemView.findViewById(R.id.tvRetweetCount);
+            tvFavoriteCount = itemView.findViewById(R.id.tvFavoriteCount);
+            retweetIcon = itemView.findViewById(R.id.retweet_icon);
+            favoritedIcon = itemView.findViewById(R.id.favorite_icon);
 
         }
 
@@ -80,6 +90,24 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvScreenName.setText(tweet.user.screenName);
             tvName.setText(tweet.user.name);
             Glide.with(context).load(tweet.user.profileImageUrl).transform(new CircleCrop()).into(ivProfileImage);
+            if (tweet.favoriteCount > 0){
+                tvFavoriteCount.setText(Integer.toString(tweet.favoriteCount));
+            }else{
+                tvFavoriteCount.setText("");
+            }
+            if (tweet.retweetCount > 0){
+                tvRetweetCount.setText(Integer.toString(tweet.retweetCount));
+
+            }else{
+                tvRetweetCount.setText("");
+            }
+            if(tweet.favorited == true){
+                favoritedIcon.setImageResource(R.drawable.ic_vector_heart);
+            }
+            if(tweet.retweeted == true){
+                Log.i("test", "this was retweeted" + tweet.body);
+                retweetIcon.setImageResource(R.drawable.ic_vector_retweet);
+            }
         }
     }
 }
