@@ -1,8 +1,8 @@
-# Project 2 - *Name of App Here*
+# Project 2 - *SimpleTweet*
 
-**Name of your app** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
+**SimpleTweet** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
-Time spent: **20** hours spent in total
+Time spent: **20+** hours spent in total
 
 ## User Stories
 
@@ -33,14 +33,21 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Login:<br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/login.gif' title='Login'/><br>
+ Infinite Scroll(plus timestamp): <br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/infinite_scroll.gif' title='Infinite Scroll'  /><br>
+Pull down to refresh:<br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/refresh_button.gif' title='Refresh Button'  /><br>
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I made the twitter screen similar to the current twitter application. I had some trouble with vectors, realized i can't convert png files into files that could be used for xml vectors. There's some images/icons that were missing and i had to create the comment icon myself. 
+
+upload icon is from https://icons-for-free.com/box+document+outline+share+top+upload+icon-1320195323221671611/  
 
 ## Open-source libraries used
 
@@ -49,7 +56,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2020] [name of copyright Kally Tang]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
