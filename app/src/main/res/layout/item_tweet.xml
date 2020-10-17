@@ -35,6 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvScreenName"
         android:layout_marginStart="10dp"
+        android:autoLink="all"
+        android:linksClickable="true"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/ivProfileImage"
         android:text="@string/this_is_my_tweet"
@@ -42,12 +44,16 @@
 
     <TextView
         android:id="@+id/tvScreenName"
-        android:layout_width="wrap_content"
+        android:layout_width="145dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/tvTimeDifference"
         android:layout_toEndOf="@+id/tvName"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:textSize="16sp"
-        tools:text="\@chicken_nugg123" />
+        tools:text="\@chicken_nugget123" />
 
     <ImageView
         android:id="@+id/comment_icon"
@@ -72,7 +78,7 @@
         app:srcCompat="@drawable/ic_vector_retweet_stroke" />
 
     <ImageView
-        android:id="@+id/like_icon"
+        android:id="@+id/favorite_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_below="@+id/tvBody"
@@ -89,7 +95,7 @@
         android:layout_below="@+id/tvBody"
         android:layout_marginStart="60dp"
         android:layout_marginTop="12dp"
-        android:layout_toEndOf="@+id/like_icon"
+        android:layout_toEndOf="@+id/favorite_icon"
         android:contentDescription="@string/upload_icon"
         app:srcCompat="@drawable/ic_upload_svgrepo_com" />
 
@@ -98,10 +104,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="6dp"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/tvScreenName"
+        android:layout_marginEnd="0dp"
         android:textSize="16sp"
         tools:text="32m" />
+
+    <TextView
+        android:id="@+id/tvRetweetCount"
+        android:textColor="@color/medium_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/retweet_icon"
+        android:contentDescription="@string/number_of_retweets"
+        android:textSize="12sp"
+        tools:text="30" />
+
+    <TextView
+        android:id="@+id/tvFavoriteCount"
+        android:textColor="@color/medium_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/favorite_icon"
+        android:contentDescription="@string/number_of_retweets"
+        android:textSize="12sp"
+        tools:text="30" />
 
 </RelativeLayout>

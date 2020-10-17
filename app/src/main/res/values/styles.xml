@@ -7,9 +7,9 @@
             backward-compatibility can go here.
 
         -->
-        <item name="colorPrimary">#FFFFFF</item>
-        <item name="colorPrimaryDark">@color/twitter_blue_fill_pressed</item>
-        <item name="colorAccent">@color/twitter_blue_50</item>
+<!--        <item name="colorPrimary">#FFFFFF</item>-->
+<!--        <item name="colorPrimaryDark">@color/twitter_blue_fill_pressed</item>-->
+<!--        <item name="colorAccent">@color/twitter_blue_50</item>-->
 
 
     </style>

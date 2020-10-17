@@ -1,5 +1,52 @@
 # Project 2 - *SimpleTweet*
 
+##*SimpleTweet Part 2*
+
+**SimpleTweet** is an android app that allows a user to view his Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
+
+Time spent: **X** hours spent in total
+
+## User Stories
+
+The following **required** functionality is completed:
+
+- [x] User can **compose and post a new tweet**
+  - [x] User can click a “Compose” icon in the Action Bar on the top right
+  - [x] User can then enter a new tweet and post this to twitter
+  - [x] User is taken back to home timeline with **new tweet visible** in timeline
+  - [x] Newly created tweet should be manually inserted into the timeline and not rely on a full refresh
+  - [x] User can **see a counter with total number of characters left for tweet** on compose tweet page
+
+The following **optional** features are implemented:
+
+- [x] User is using **"Twitter branded" colors and styles**
+- [ ] User can click links in tweets launch the web browser 
+- [ ] User can **select "reply" from detail view to respond to a tweet**
+- [ ] The "Compose" action is moved to a FloatingActionButton instead of on the AppBar
+- [ ] Compose tweet functionality is build using modal overlay
+- [x] Use Parcelable instead of Serializable using the popular [Parceler library](http://guides.codepath.org/android/Using-Parceler).
+- [x] User can **open the twitter app offline and see last loaded tweets**. Persisted in SQLite tweets are refreshed on every application launch. While "live data" is displayed when app can get it from Twitter API, it is also saved for use in offline mode.
+- [ ] When a user leaves the compose view without publishing and there is existing text, prompt to save or delete the draft. If saved, the draft should then be **persisted to disk** and can later be resumed from the compose view.
+- [ ] Enable your app to receive implicit intents from other apps. When a link is shared from a web browser, it should pre-fill the text and title of the web page when composing a tweet. 
+
+The following **additional** features are implemented:
+
+- [ ] List anything else that you can get done to improve the app functionality!
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+## Notes
+
+I added more details into the app to make it more Twitter branded, adding numbers next to the favorite and retweet button, as well as coloring the retweet to green and favorite icon to red.
+
+##Project 2 - *SimpleTweet Part 1*
+
 **SimpleTweet** is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
 Time spent: **20+** hours spent in total
@@ -18,7 +65,7 @@ The following **optional** features are implemented:
 
 - [x] User can view more tweets as they scroll with infinite pagination 
 - [x] Improve the user interface and theme the app to feel "twitter branded"
-- [ ] Links in tweets are clickable and will launch the web browser
+- [x] Links in tweets are clickable and will launch the web browser
 - [ ] User can tap a tweet to display a "detailed" view of that tweet
 - [ ] User can see embedded image media within the tweet detail view
 - [ ] User can watch embedded video within the tweet
@@ -27,7 +74,9 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+
 - [ ] List anything else that you can get done to improve the app functionality!
+- [x] Move the "Compose" action to a FloatingActionButton instead of on the AppBar. 
 
 ## Video Walkthrough
 

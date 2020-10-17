@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
+
     android:layout_height="match_parent"
 
     tools:context=".TimelineActivity">
@@ -17,6 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_marginTop="0dp"
             android:background="@drawable/background_layout"
             android:minHeight="?attr/actionBarSize"
@@ -37,17 +38,14 @@
             app:srcCompat="@drawable/ic_twitter_logo_blue" />
 
         <ImageView
-            android:id="@+id/tweet_dialog"
+            android:id="@+id/tweet_stars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="5dp"
+            android:layout_centerVertical="true"
             android:layout_marginEnd="10dp"
             android:scaleType="centerCrop"
-            android:scaleX="1.5"
-            android:scaleY="1.5"
-            app:srcCompat="@drawable/vector_compose_shortcut" />
+            app:srcCompat="@drawable/ic_vector_most_recent_stars" />
 
         <ImageView
             android:id="@+id/profileImage"
@@ -56,59 +54,65 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="3dp"
             tools:srcCompat="@tools:sample/avatars" />
 
     </RelativeLayout>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipeContainer"
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordLayout"
         android:layout_width="match_parent"
-        android:layout_height="544dp"
-        android:layout_above="@+id/toolbar2"
+        android:layout_height="677dp"
         android:layout_below="@+id/rel_toolbar_top"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp">
+        android:layout_marginBottom="48dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvTweets"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingButtonCompose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/twitter_blue"
+            android:src="@drawable/vector_compose_fab"
+            app:backgroundTint="@color/twitter_blue" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeContainer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp">
+            android:layout_height="726dp"
+            android:layout_above="@id/floatingButtonCompose"
+            android:layout_below="@+id/rel_layout_bottom">
 
-        </androidx.recyclerview.widget.RecyclerView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTweets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp">
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </androidx.recyclerview.widget.RecyclerView>
 
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
     <RelativeLayout
+        android:id="@+id/rel_layout_bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
-            android:background="@drawable/background_layout"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme">
-
-
-        </androidx.appcompat.widget.Toolbar>
+        android:layout_height="50dp"
+        android:background="@drawable/background_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_alignTop="@+id/toolbar2"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="45dp"
@@ -120,11 +124,9 @@
             android:id="@+id/imageView"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="65dp"
             android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
             android:layout_toEndOf="@+id/imageView6"
             app:srcCompat="@drawable/ic_vector_search_stroke" />
 
@@ -132,7 +134,6 @@
             android:id="@+id/imageView7"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="65dp"
             android:layout_marginTop="0dp"
@@ -144,7 +145,6 @@
             android:id="@+id/imageView8"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="65dp"
             android:layout_marginTop="0dp"
@@ -154,7 +154,4 @@
     </RelativeLayout>
 
 
-
-
-
-</LinearLayout>
+</RelativeLayout>
