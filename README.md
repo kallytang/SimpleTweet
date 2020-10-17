@@ -4,7 +4,7 @@
 
 **SimpleTweet** is an android app that allows a user to view his Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
-Time spent: **X** hours spent in total
+Time spent: **15** hours spent in total
 
 ## User Stories
 
@@ -20,9 +20,9 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [x] User is using **"Twitter branded" colors and styles**
-- [ ] User can click links in tweets launch the web browser 
+- [x] User can click links in tweets launch the web browser 
 - [ ] User can **select "reply" from detail view to respond to a tweet**
-- [ ] The "Compose" action is moved to a FloatingActionButton instead of on the AppBar
+- [x] The "Compose" action is moved to a FloatingActionButton instead of on the AppBar
 - [ ] Compose tweet functionality is build using modal overlay
 - [x] Use Parcelable instead of Serializable using the popular [Parceler library](http://guides.codepath.org/android/Using-Parceler).
 - [x] User can **open the twitter app offline and see last loaded tweets**. Persisted in SQLite tweets are refreshed on every application launch. While "live data" is displayed when app can get it from Twitter API, it is also saved for use in offline mode.
@@ -35,9 +35,23 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories:<br>
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+The compose feature:<br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/compose.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
+
+handling too long of text message: <br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/too_long_length_tweet.gif' width='' alt='Video Walkthrough' /><br>
+
+handling too short: 
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/too_short_length_tweet.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
+
+offline view, saving tweets to sql lite with a short number of saved items: 
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/offline_view_shorted_num.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
+
+offline view, with more data saved to sql lite: <br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/master/offline_view.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
