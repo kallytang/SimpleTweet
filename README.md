@@ -43,10 +43,10 @@ The compose feature:<br>
 handling too long of text message: <br>
 <img src='https://github.com/kallytang/SimpleTweet/blob/master/too_long_length_tweet.gif' width='' alt='Video Walkthrough' /><br>
 
-handling too short: 
+handling too short: <br>
 <img src='https://github.com/kallytang/SimpleTweet/blob/master/too_short_length_tweet.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
 
-offline view, saving tweets to sql lite with a short number of saved items: 
+offline view, saving tweets to sql lite with a short number of saved items: <br>
 <img src='https://github.com/kallytang/SimpleTweet/blob/master/offline_view_shorted_num.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
 
 offline view, with more data saved to sql lite: <br>
