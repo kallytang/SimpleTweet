@@ -38,19 +38,19 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:<br>
 
 The compose feature:<br>
-<img src='https://github.com/kallytang/SimpleTweet/blob/master/compose.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/main/compose.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
 
 handling too long of text message: <br>
-<img src='https://github.com/kallytang/SimpleTweet/blob/master/too_long_length_tweet.gif' width='' alt='Video Walkthrough' /><br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/main/too_long_length_tweet.gif' width='' alt='Video Walkthrough' /><br>
 
 handling too short: <br>
-<img src='https://github.com/kallytang/SimpleTweet/blob/master/too_short_length_tweet.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/main/too_short_length_tweet.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
 
 offline view, saving tweets to sql lite with a short number of saved items: <br>
 <img src='https://github.com/kallytang/SimpleTweet/blob/main/offline_view_shortened_num.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
 
 offline view, with more data saved to sql lite: <br>
-<img src='https://github.com/kallytang/SimpleTweet/blob/master/offline_view.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/main/offline_view.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
