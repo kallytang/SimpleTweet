@@ -47,7 +47,7 @@ handling too short: <br>
 <img src='https://github.com/kallytang/SimpleTweet/blob/master/too_short_length_tweet.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
 
 offline view, saving tweets to sql lite with a short number of saved items: <br>
-<img src='https://github.com/kallytang/SimpleTweet/blob/master/offline_view_shorted_num.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
+<img src='https://github.com/kallytang/SimpleTweet/blob/main/offline_view_shortened_num.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
 
 offline view, with more data saved to sql lite: <br>
 <img src='https://github.com/kallytang/SimpleTweet/blob/master/offline_view.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /><br>
