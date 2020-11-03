@@ -58,12 +58,18 @@ public class Tweet {
     public String timeStamp;
 //    public JSONObject entitiesObject;
 
+//    @ColumnInfo
+//    public User userOriginal;
+//
+//    public boolean retweetedbyAnother;
     //empty constructor needed for the Parceler Library
     public Tweet() {}
     //create tweet and userObject
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException {
 
         Tweet tweet = new Tweet();
+
+
         tweet.body = jsonObject.getString("text");
         tweet.user = User.fromJSON(jsonObject.getJSONObject("user"));
         tweet.id = jsonObject.getLong("id");
@@ -74,11 +80,16 @@ public class Tweet {
         tweet.timeStamp = TimeFormatter.getTimeStamp(tweet.createdAt);
         User user = User.fromJSON(jsonObject.getJSONObject("user"));
         tweet.userId = user.id;
-//        tweet.entitiesObject = jsonObject.getJSONObject("entities");
         tweet.favorited = jsonObject.getBoolean("favorited");
         tweet.retweeted = jsonObject.getBoolean("retweeted");
-//        if(tweet.entitiesObject.has("media")){
-////            Log.i("tweet", tweet.entitiesObject.toString());
+
+        //To handle retweets by users, in twitter tweets are tweets objects in a tweet object
+        try {
+            jsonObject.getJSONObject("retweeted_status");
+            Log.i("retweet","i have retweet data");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
 
         return tweet;

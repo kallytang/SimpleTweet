@@ -24,13 +24,17 @@ import com.codepath.apps.restclienttemplate.models.TweetDao;
 import com.codepath.apps.restclienttemplate.models.TweetWithUser;
 import com.codepath.apps.restclienttemplate.models.User;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
+import com.codepath.oauth.OAuthTokenClient;
 import com.github.scribejava.apis.TwitterApi;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 import org.parceler.Parcels;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +46,8 @@ public class TimelineActivity extends AppCompatActivity {
     public static final String TAG = "TimelineActivity";
     private final int REQUEST_CODE = 20;
     TwitterClient client;
+    String username;
+    String user_screen_name;
     RecyclerView rvTweets;
     List<Tweet> tweets;
     TweetsAdapter adapter;
@@ -50,14 +56,17 @@ public class TimelineActivity extends AppCompatActivity {
     ImageView profileImage;
     TweetDao tweetDao;
     FloatingActionButton floatingActionButton;
+    String profile_image_url;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timeline);
 
+
+
         //set profile image
-        profileImage = findViewById(R.id.profileImage);
-        Glide.with(this).load(R.drawable.default_profile_normal).transform(new CircleCrop()).into(profileImage);
+
         //onclick listener for floating button
         floatingActionButton= findViewById(R.id.floatingButtonCompose);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +80,33 @@ public class TimelineActivity extends AppCompatActivity {
 
 
         client = TwitterApp.getRestClient(this);
+
+        client.getCurrentUserInfo(new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Headers headers, JSON json) {
+                Log.i("clientInfo", "I have user info"+json.toString());
+//
+                JSONObject profileObject = json.jsonObject;
+                try {
+                    profile_image_url = profileObject.getString("profile_image_url_https");
+                    Log.i("profileImage", profile_image_url);
+                    profileImage = findViewById(R.id.profileImage);
+
+                    Glide.with(getApplicationContext()).load(profile_image_url).transform(new CircleCrop()).into(profileImage);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
+                Log.e("clientInfo", "can't get client info, " + response.toString());
+
+            }
+        });
+
+
 
         tweetDao = ((TwitterApp) getApplicationContext()).getMyDatabase().tweetDao();
 
@@ -176,6 +212,7 @@ public class TimelineActivity extends AppCompatActivity {
 //                Log.i(TAG, "onSuccess for loadMore Data" + json.toString());
                 //  --> Deserialize and construct new model objects from the API response
                 JSONArray jsonArray = json.jsonArray;
+                Log.i("json_data", jsonArray.toString());
                 try {
                     List<Tweet> tweets = Tweet.fromJsonArray(jsonArray);
                     //  --> Append the new data objects to the existing set of items inside the array of items
@@ -205,8 +242,11 @@ public class TimelineActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, Headers headers, JSON json) {
 //                Log.i(TAG, "onSuccess" + json.toString());
                 JSONArray jsonArray = json.jsonArray;
+                Log.i("json_data", jsonArray.toString());
+
                 try {
                     final List<Tweet> tweetsFromNetwork = Tweet.fromJsonArray(jsonArray);
+
                     adapter.clear();
                     adapter.addAll(tweetsFromNetwork);
                     swipeContainer.setRefreshing(false);
