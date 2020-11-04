@@ -61,7 +61,9 @@ public class Tweet {
 //    @ColumnInfo
 //    public User userOriginal;
 //
-//    public boolean retweetedbyAnother;
+    @ColumnInfo
+    public boolean retweetedbyAnother;
+
     //empty constructor needed for the Parceler Library
     public Tweet() {}
     //create tweet and userObject
@@ -87,8 +89,10 @@ public class Tweet {
         try {
             jsonObject.getJSONObject("retweeted_status");
             Log.i("retweet","i have retweet data");
+            tweet.retweetedbyAnother = true;
         } catch (JSONException e) {
             e.printStackTrace();
+            tweet.retweetedbyAnother = false;
         }
 
 
